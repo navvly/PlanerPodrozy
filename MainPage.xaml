@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Planer_podróży.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label
+            Text="✈️ Planer podróży"
+            FontSize="30"
+            HorizontalOptions="Center" />
+
+            <Entry
+            x:Name="tripName"
+            Placeholder="Nazwa podróży" />
+
+            <Entry
+            x:Name="cityName"
+            Placeholder="Miasto" />
+
+            <DatePicker
+            x:Name="startDate"
+            DateSelected="StartDateChanged" />
+            
+            <DatePicker
+            x:Name="endDate" />
+
+            <Entry
+            x:Name="budget"
+            Placeholder="Budżet (zł)"
+            Keyboard="Numeric"
+            TextChanged="BudgetChanged" />
+            
+            <Button
+            x:Name="addButton"
+            Text="Dodaj podróż"
+            Clicked="OnAddTripClicked" />
+
+            <Button
+            Text="Usuń podróż"
+            Clicked="OnDeleteTripClicked" />
+
+            <CollectionView
+            x:Name="tripList"
+            SelectionMode="Single"
+            SelectionChanged="TripSelected">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout>
+
+                            <Frame
+            Margin="5"
+            Padding="15">
+
+                                <Label Text="{Binding}" />
+
+                            </Frame>
+
+
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Frame
+            x:Name="detailsFrame"
+            Margin="5"
+            IsVisible="False">
+
+                <VerticalStackLayout>
+
+                    <Button
+            Text="✕"
+            HorizontalOptions="End"
+            Clicked="CloseDetailsClicked" />
+
+                    <Label
+            Text="Szczegóły podróży"
+            FontSize="22"
+            FontAttributes="Bold" />
+
+                    <Label
+            x:Name="detailsName" />
+
+                    <Label
+            x:Name="detailsCity" />
+
+                    <Label
+            x:Name="detailsDate" />
+
+                    <Label
+            x:Name="detailsBudget" />
+
+                    <Label
+            x:Name="detailsStatus" />
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
