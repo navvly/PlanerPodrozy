@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Text.Json;
 using System.IO;
+using Planer_podróży.Models;
 
 namespace Planer_podróży
 {
@@ -75,10 +76,9 @@ namespace Planer_podróży
                 tripList.ItemsSource = trips;
 
                 detailsName.Text = $"Nazwa: {selectedTrip.Name}";
-detailsCity.Text = $"Miasto: {selectedTrip.City}";
-detailsDate.Text =
-    $"Data: {selectedTrip.StartDate:dd.MM.yyyy} - {selectedTrip.EndDate:dd.MM.yyyy}";
-detailsBudget.Text = $"Budżet: {selectedTrip.Budget} zł";
+                detailsCity.Text = $"Miasto: {selectedTrip.City}";
+                detailsDate.Text = $"Data: {selectedTrip.StartDate:dd.MM.yyyy} - {selectedTrip.EndDate:dd.MM.yyyy}";
+                detailsBudget.Text = $"Budżet: {selectedTrip.Budget} zł";
 
                 selectedTrip = null;
                 addButton.Text = "Dodaj podróż";

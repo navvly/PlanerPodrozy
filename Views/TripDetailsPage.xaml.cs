@@ -1,3 +1,5 @@
+using Planer_podróży.Models;
+
 namespace Planer_podróży;
 
 public partial class TripDetailsPage : ContentPage

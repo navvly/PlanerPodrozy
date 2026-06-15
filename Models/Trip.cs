@@ -1,4 +1,4 @@
-﻿namespace Planer_podróży
+﻿namespace Planer_podróży.Models
 {
     public class Trip
     {

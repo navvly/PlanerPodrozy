@@ -65,13 +65,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="TripDetailsPage.xaml.cs">
+	  <Compile Update="Views\TripDetailsPage.xaml.cs">
 	    <DependentUpon>TripDetailsPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="TripDetailsPage.xaml">
+	  <MauiXaml Update="Views\TripDetailsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
